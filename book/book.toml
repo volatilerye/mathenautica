@@ -1,8 +1,0 @@
-[book]
-authors = ["volatile rye"]
-language = "jp"
-src = "src"
-title = "mathenautica"
-
-[output.html]
-mathjax-support = true

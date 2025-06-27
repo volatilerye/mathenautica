@@ -1,0 +1,17 @@
+[book]
+authors = ["volatile rye"]
+language = "jp"
+src = "src"
+title = "mathenautica"
+
+[output.html]
+theme = "src/theme"
+additionalcss= ["css/general.css"]
+mathjax-support = true
+
+[output.html.fold]
+enable = true
+level = 0 
+
+[output.html.print]
+enable = false

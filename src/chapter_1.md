@@ -21,3 +21,23 @@ int main(){
 |--|--|--|--|
 |1|a1|b1|c1|
 |2|a2|b2|c2|
+
+<div class="alert caution">
+what happening!?
+</div>
+
+<details>
+
+<summary>Tips for collapsed sections</summary>
+
+### You can add a header
+
+You can add text within a collapsed section.
+
+You can add an image or a code block, too.
+
+```python
+   print("Hello World")
+```
+
+</details>
