@@ -16,5 +16,5 @@ level = 0
 [output.html.print]
 enable = false
 
-[output.replace_nav_chapters]
-command = "python -X utf8 ../../scripts/replace_nav_chapters.py"
+[output.replace]
+command = "sh ../../scripts/replace.sh"
