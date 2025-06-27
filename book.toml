@@ -6,8 +6,8 @@ title = "mathenautica"
 
 [output.html]
 theme = "src/theme"
-additionalcss= ["css/general.css"]
 mathjax-support = true
+no-section-label = true
 
 [output.html.fold]
 enable = true
@@ -15,3 +15,6 @@ level = 0
 
 [output.html.print]
 enable = false
+
+[output.replace_nav_chapters]
+command = "python -X utf8 ../../scripts/replace_nav_chapters.py"
