@@ -8,7 +8,7 @@ class MDBookSidebarScrollbox extends HTMLElement {
         super();
     }
     connectedCallback() {
-        this.innerHTML = '<ol class="chapter"><li class="chapter-item affix "><a href="index.html">HOME</a></li><li class="chapter-item affix "><li class="part-title">確率論 (Probability Theory)</li><li class="chapter-item "><a href="probability_and_statistics/dice.html">&quot;サイコロの合計がnの倍数になる確率&quot;</a></li></ol>';
+        this.innerHTML = '<ol class="chapter"><li class="chapter-item affix "><a href="index.html">HOME</a></li><li class="chapter-item affix "><li class="part-title">確率論 (Probability Theory)</li><li class="chapter-item "><a href="probability_and_statistics/dice.html">サイコロの合計が &#92;(n&#92;) の倍数になる確率</a></li></ol>';
         // Set the current, active page, and reveal it if it's hidden
         let current_page = document.location.href.toString().split("#")[0].split("?")[0];
         if (current_page.endsWith("/")) {

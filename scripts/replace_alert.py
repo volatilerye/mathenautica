@@ -14,11 +14,12 @@ def replace_alerts_in_md_files(html: Path) -> None:
 
     for tag in soup.find_all("blockquote"):
         matched: re.Match[str] | None = None
-        if p := tag.find("p") is not None:
-            matched = re.fullmatch(
+        p = tag.find("p")
+        if p:
+            matched = re.match(
+                r"<p>\[\!(default|note|tip|important|warning|caution)\]\s*([^\n]*)",
                 str(p),
-                r"\[\!(default|note|tip|important|warning|caution)\]\s*([^\n]*)(.*)",
-                flags=re.IGNORECASE,
+                flags=re.IGNORECASE | re.MULTILINE,
             )
             if matched:
                 # alert
@@ -26,46 +27,54 @@ def replace_alerts_in_md_files(html: Path) -> None:
                 match alert_type:
                     case "default":
                         tag.name = "div"
+                        tag["class"] = "alert default"
                     case "note":
                         tag.name = "div"
+                        tag["class"] = "alert note"
                     case "tip":
                         tag.name = "div"
+                        tag["class"] = "alert tip"
                     case "important":
                         tag.name = "div"
+                        tag["class"] = "alert important"
                     case "warning":
                         tag.name = "div"
+                        tag["class"] = "alert warning"
                     case "caution":
                         tag.name = "div"
+                        tag["class"] = "alert caution"
                     case _:
                         continue
-
                 # title
                 title = matched.group(2)
-                content = matched.group(3)
+                context = str(p)[matched.span()[1]:]
                 if title:
                     match alert_type:
                         case "default":
-                            tag.name = f"<p class='alert title'>{title}</p>\n{content}"
+                            tag.string = f"<p class='alert title'>{title}</p>\n{context}\n"
                         case "note":
-                            tag.name = (
-                                f"<p class='alert note title'>{title}</p>\n{content}"
+                            tag.string = (
+                                f"<p class='alert note title'>{title}</p>\n{context}\n"
                             )
                         case "tip":
-                            tag.name = (
-                                f"<p class='alert tip title'>{title}</p>\n{content}"
+                            tag.string = (
+                                f"<p class='alert tip title'>{title}</p>\n{context}\n"
                             )
                         case "important":
-                            tag.name = f"<p class='alert important title'>{title}</p>\n{content}"
+                            tag.string = f"<p class='alert important title'>{title}</p>\n{context}\n"
                         case "warning":
-                            tag.name = (
-                                f"<p class='alert warning title'>{title}</p>\n{content}"
+                            tag.string = (
+                                f"<p class='alert warning title'>{title}</p>\n{context}\n"
                             )
                         case "caution":
-                            tag.name = (
-                                f"<p class='alert caution title'>{title}</p>\n{content}"
+                            tag.string = (
+                                f"<p class='alert caution title'>{title}</p>\n{context}\n"
                             )
                         case _:
                             continue
+    
+    with html.open('w', encoding="utf-8") as f:
+        f.write(soup.encode(formatter=None).decode("utf-8"))
 
 
 if __name__ == "__main__":
