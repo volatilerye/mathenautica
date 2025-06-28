@@ -8,6 +8,8 @@
 
 ---
 
+## 生成関数による解法
+
 生成関数 $f(z)$ を
 
 $$f(z) = \left\\{\frac{1}{D}\sum\_{i=1}^{D}z^i\right\\}^n$$ と定義する.
@@ -25,16 +27,18 @@ $$
 P\_{k,n,D} 
 &= \frac{1}{k}\left\\{\sum\_{m=1}^{k}f(\xi^m)\right\\}  \notag \\\\
 &= \frac{1}{k}\left\\{1+D^{-n}\sum\_{m=1}^{k-1}\left(\sum\_{i=1}^{D}\xi^{im}\right)^n\right\\} \\\\
-&= \frac{1}{k}\left\\{1+\xi^nD^{-n}\sum\_{m=1}^{k-1}(1-\xi^{Dm})^n(1-\xi^m)^{-n}\right\\}.
+&= \frac{1}{k}\left\\{1+D^{-n}\sum\_{m=1}^{k-1}\left\\{\xi^m(1-\xi^{Dm})(1-\xi^m)^{-1}\right\\}^n\right\\}.
 \end{align}
 $$
 
 
 ---
 
+## 特定の条件にある場合の確率
+
 $k, D$ が特定の条件にある場合は, $P\_{k,n,D}$ は簡単に求めることができる.
 
-> [!tip] 補題1
+> [!important] 補題1
 > $$
 > \begin{align}
 >     \xi^{k} &= 1, \\\\
@@ -47,45 +51,77 @@ $k, D$ が特定の条件にある場合は, $P\_{k,n,D}$ は簡単に求める�
 >
 > 式(4) は
 > $$
-> \begin{align}
->   &\xi^{k} = 1 \\\\
->   \Longrightarrow\;&
->   \xi^{k} -1 = 0 \\\\
->   \Longrightarrow\;&
->   (\xi -1)(1+\xi+\dots+\xi^{k-1}) = 0 \\\\
->   \Longrightarrow\;&
->   (\xi -1)(1+\xi+\dots+\xi^{k-1}) = 0 \\\\
-> \end{align}
-> $$
-
-> [!tip] 定理1
-> $k$ が $D$ の倍数ならば, $P\_{k,n,D}=1/k.$
-
-> [!proof]
-> 式(1)より, 
-> $$
 > \begin{align*}
->   P\_{k,n,D} 
+>   &\xi^{k} = 1 \\\\
+>   \Longrightarrow\\;&
+>   \xi^{k} -1 = 0 \\\\
+>   \Longrightarrow\\;&
+>   (\xi -1)(1+\xi+\dots+\xi^{k-1}) = 0 \\\\
+>   \Longrightarrow\\;&
+>   1+\xi+\dots+\xi^{k-1} = 0 \\\\
+>   \Longrightarrow\\;&
+>   \xi+\xi^2+\dots+\xi^{k} = 0.
 > \end{align*}
 > $$
 
-<!-- > [!default] default
-> lorem ipsum dolor sit amet
+> [!tip] 定理2
+> $k$ が $D$ の約数ならば, $P\_{k,n,D}=1/k.$
 
-> [!note] note
-> lorem ipsum dolor sit amet
+> [!proof]
+> 式(2), (4)より, 
+> $$
+> \begin{align*}
+>   P\_{k,n,D} 
+>   &= \frac{1}{k}\left\\{1+D^{-n}\sum\_{m=1}^{k-1}\left\\{\xi^m(1-\xi^{Dm})(1-\xi^m)^{-1}\right\\}^n\right\\} \\\\
+>   &= \frac{1}{k}\left\\{1+D^{-n}\sum\_{m=1}^{k-1}\left\\{\xi^m\cdot 0 \cdot(1-\xi^m)^{-1}\right\\}^n\right\\} \\\\
+>   &= \frac{1}{k}. \\\\
+> \end{align*}
+> $$
 
-> [!tip] tip
-> lorem ipsum dolor sit amet
+> [!tip] 定理3
+> $k=D+1$ ならば, $P\displaystyle P\_{k,n,D}=\frac{1}{k}(1-(-D)^{1-n}).$
 
-> [!important] important
-> lorem ipsum dolor sit amet
+> [!proof]
+> 式(2), (4)より, 
+> $$
+> \begin{align*}
+>   P\_{k,n,D} 
+>   &= \frac{1}{k}\left\\{1+D^{-n}\sum\_{m=1}^{k-1}\left\\{\xi^m(1-\xi^{(k-1)m})(1-\xi^m)^{-1}\right\\}^n\right\\} \\\\
+>   &= \frac{1}{k}\left\\{1+D^{-n}\sum\_{m=1}^{k-1}(-1)^n\right\\} \\\\
+>   &= \frac{1}{k}(1-(-D)^{1-n}). \\\\
+> \end{align*}
+> $$
 
-> [!warning] warning
-> lorem ipsum dolor sit amet
+---
 
-> [!caution] caution
-> lorem ipsum dolor sit amet
+## 計算量を削減する方法の検討
 
-> [!proof] proof
-> lorem ipsum dolor sit amet -->
+定理2, 3 の条件に該当しない場合, 簡単に $P\_{k,n,D}$ を導出する方法は (おそらく) ないと思う.
+ここでは, 少しでも計算量を削減するための工夫を考えよう.
+
+改めて, 確率 $P\_{k,n,D}$ の確率は
+
+$$P\_{k,n,D} = \frac{1}{k}\left\\{1+D^{-n}\sum\_{m=1}^{k-1}\left\\{\xi^m(1-\xi^{Dm})(1-\xi^m)^{-1}\right\\}^n\right\\}$$
+
+であった. ここで $|z|=e^{i\theta},\\;z\neq1,\\;\theta\in\mathbb{R}$ としたとき,
+
+$$
+\begin{align*}
+|1-z|^2 &= (1-z)\overline{(1-z)} \\\\
+&= (1-z)(1-\overline{z}) \\\\
+&= 1 - (z + \overline{z}) \\\\
+&= 1 - 2\cos\theta,
+\end{align*}
+$$
+
+$$
+\begin{align*}
+\arg(1-z)
+&= \frac{1}{2}\arg(1-z)^2 \\\\
+&= \frac{1}{2}\arg\left(\frac{1-z}{|1-z|}\right)^2 \\\\
+&= \frac{1}{2}\arg\frac{1-z}{1-\overline{z}}.
+\end{align*}
+$$
+
+> [!default] draft
+> 続きを執筆中です...
