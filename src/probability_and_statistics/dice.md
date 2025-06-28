@@ -29,6 +29,9 @@ P\_{k,n,D}
 \end{align}
 $$
 
+> [!proof]
+> 自明.
+
 ---
 
 > [!default] draft

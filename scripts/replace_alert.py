@@ -17,7 +17,7 @@ def replace_alerts_in_md_files(html: Path) -> None:
         p = tag.find("p")
         if p:
             matched = re.match(
-                r"<p>\[\!(default|note|tip|important|warning|caution)\]\s*([^\n]*)",
+                r"<p>\[\!(default|note|tip|important|warning|caution|proof)\]\s*([^\n]*)",
                 str(p),
                 flags=re.IGNORECASE | re.MULTILINE,
             )
@@ -43,37 +43,41 @@ def replace_alerts_in_md_files(html: Path) -> None:
                     case "caution":
                         tag.name = "div"
                         tag["class"] = "alert caution"
+                    case "proof":
+                        tag.name = "div"
+                        tag["class"] = "alert proof"
                     case _:
                         continue
                 # title
                 title = matched.group(2)
-                context = str(p)[matched.span()[1]:]
+                context = str(p)[matched.span()[1] : -4]
                 if title:
                     match alert_type:
                         case "default":
-                            tag.string = f"<p class='alert title'>{title}</p>\n{context}\n"
+                            tag.string = (
+                                f"<p class='alert title'>{title}</p>\n{context}</p>\n"
+                            )
                         case "note":
-                            tag.string = (
-                                f"<p class='alert note title'>{title}</p>\n{context}\n"
-                            )
+                            tag.string = f"<p class='alert note title'>{title}</p>\n{context}</p>\n"
                         case "tip":
-                            tag.string = (
-                                f"<p class='alert tip title'>{title}</p>\n{context}\n"
-                            )
+                            tag.string = f"<p class='alert tip title'>{title}</p>\n{context}</p>\n"
                         case "important":
-                            tag.string = f"<p class='alert important title'>{title}</p>\n{context}\n"
+                            tag.string = f"<p class='alert important title'>{title}</p>\n{context}</p>\n"
                         case "warning":
-                            tag.string = (
-                                f"<p class='alert warning title'>{title}</p>\n{context}\n"
-                            )
+                            tag.string = f"<p class='alert warning title'>{title}</p>\n{context}</p>\n"
                         case "caution":
-                            tag.string = (
-                                f"<p class='alert caution title'>{title}</p>\n{context}\n"
+                            tag.string = f"<p class='alert caution title'>{title}</p>\n{context}</p>\n"
+                        case "proof":
+                            begin_details = (
+                                "<details><summary>証明 (クリックで展開)</summary>"
                             )
+                            end_details = "</details>"
+                            end_proof = '<div style="position: relative;"><span style="position: absolute; right: 0em; bottom: 0em; font-size: 1.5em">■</span></div>'
+                            tag.string = f"{begin_details}\n\n<p class='alert proof title'>{title}</p>\n{context}\n{end_proof}</p>\n{end_details}\n"
                         case _:
                             continue
-    
-    with html.open('w', encoding="utf-8") as f:
+
+    with html.open("w", encoding="utf-8") as f:
         f.write(soup.encode(formatter=None).decode("utf-8"))
 
 
