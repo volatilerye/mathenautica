@@ -15,11 +15,12 @@ def replace_alerts_in_md_files(html: Path) -> None:
     for tag in soup.find_all("blockquote"):
         matched: re.Match[str] | None = None
         p = tag.find("p")
+        print(p)
         if p:
             matched = re.match(
-                r"<p>\[\!(default|note|tip|important|warning|caution|proof)\]\s*([^\n]*)",
-                str(p),
-                flags=re.IGNORECASE | re.MULTILINE,
+                r"<p>\[\!(default|note|tip|important|warning|caution|proof)\] *(.*)",
+                str(p).split("\n")[0],
+                flags=re.IGNORECASE,
             )
             if matched:
                 # alert
@@ -50,8 +51,8 @@ def replace_alerts_in_md_files(html: Path) -> None:
                         continue
                 # title
                 title = matched.group(2)
-                context = str(p)[matched.span()[1] : -4]
-                if title:
+                context = '\n'.join(str(tag).replace(f'<div class="{tag["class"]}">\n', '').replace("\n</div>", "").split("\n", 1)[1:])
+                if tag["class"]:
                     match alert_type:
                         case "default":
                             tag.string = (

@@ -172,7 +172,6 @@
 </nav>
 <h1 id="サイコロの合計が-n-の倍数になる確率"><a class="header" href="#サイコロの合計が-n-の倍数になる確率">サイコロの合計が $n$ の倍数になる確率</a></h1>
 <div class="alert note"><p class="alert note title">問題</p>
-
 どの目も出る確率が同様に確からしい $D$ 面サイコロを $n$ 個投げた.<br/>
 このとき, 出た目の合計が $k$ の倍数である確率 $P_{k,n,D}$ を求めよ.
 </div>
@@ -193,16 +192,68 @@ P_{k,n,D}
 &= \frac{1}{k}\left\{1+\xi^nD^{-n}\sum_{m=1}^{k-1}(1-\xi^{Dm})^n(1-\xi^m)^{-n}\right\}.
 \end{align}
 $$</p>
+<hr/>
+<p>$k, D$ が特定の条件にある場合は, $P_{k,n,D}$ は簡単に求めることができる.</p>
+<div class="alert tip"><p class="alert tip title">補題1</p>
+$$
+\begin{align}
+\xi^{k} &= 1, \\
+\xi^{1} + \xi^{2} + \dots + \xi^{k} &= 0. \\
+\end{align}
+$$
+</div>
 <div class="alert proof"><details><summary>証明 (クリックで展開)</summary>
-<p class="alert proof title">自明.</p>
+<p class="alert proof title"></p>
+式(3) は $k$ 乗根の定義より明らか.
+<p>式(4) は
+$$
+\begin{align}
+&\xi^{k} = 1 \\
+\Longrightarrow;&
+\xi^{k} -1 = 0 \\
+\Longrightarrow;&
+(\xi -1)(1+\xi+\dots+\xi^{k-1}) = 0 \\
+\Longrightarrow;&
+(\xi -1)(1+\xi+\dots+\xi^{k-1}) = 0 \\
+\end{align}
+$$</p>
 <div style="position: relative;"><span style="position: absolute; right: 0em; bottom: 0em; font-size: 1.5em">■</span></div>
 </details>
 </div>
-<hr/>
-<div class="alert default"><p class="alert title">draft</p>
-
-現在執筆中...
+<div class="alert tip"><p class="alert tip title">定理1</p>
+$k$ が $D$ の倍数ならば, $P_{k,n,D}=1/k.$
 </div>
+<div class="alert proof"><details><summary>証明 (クリックで展開)</summary>
+<p class="alert proof title"></p>
+式(1)より,
+$$
+\begin{align*}
+P_{k,n,D}
+\end{align*}
+$$
+<div style="position: relative;"><span style="position: absolute; right: 0em; bottom: 0em; font-size: 1.5em">■</span></div>
+</details>
+</div>
+<!-- > [!default] default
+> lorem ipsum dolor sit amet
+
+> [!note] note
+> lorem ipsum dolor sit amet
+
+> [!tip] tip
+> lorem ipsum dolor sit amet
+
+> [!important] important
+> lorem ipsum dolor sit amet
+
+> [!warning] warning
+> lorem ipsum dolor sit amet
+
+> [!caution] caution
+> lorem ipsum dolor sit amet
+
+> [!proof] proof
+> lorem ipsum dolor sit amet -->
 <nav aria-label="Page navigation" class="prev-next-buttons">
 <a aria-keyshortcuts="Left" class="local-button active" href="../index.html" rel="prev" style="text-decoration: none;" title="HOME">
 <span class="arrow">←</span>

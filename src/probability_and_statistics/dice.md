@@ -1,6 +1,6 @@
 # サイコロの合計が $n$ の倍数になる確率
 
-> [!NOTE] 問題
+> [!note] 問題
 > どの目も出る確率が同様に確からしい $D$ 面サイコロを $n$ 個投げた.  
 > このとき, 出た目の合計が $k$ の倍数である確率 $P\_{k,n,D}$ を求めよ.
 
@@ -29,10 +29,63 @@ P\_{k,n,D}
 \end{align}
 $$
 
-> [!proof]
-> 自明.
 
 ---
 
-> [!default] draft
-> 現在執筆中...
+$k, D$ が特定の条件にある場合は, $P\_{k,n,D}$ は簡単に求めることができる.
+
+> [!tip] 補題1
+> $$
+> \begin{align}
+>     \xi^{k} &= 1, \\\\
+>     \xi^{1} + \xi^{2} + \dots + \xi^{k} &= 0. \\\\
+> \end{align}
+> $$
+
+> [!proof]
+> 式(3) は $k$ 乗根の定義より明らか.
+>
+> 式(4) は
+> $$
+> \begin{align}
+>   &\xi^{k} = 1 \\\\
+>   \Longrightarrow\;&
+>   \xi^{k} -1 = 0 \\\\
+>   \Longrightarrow\;&
+>   (\xi -1)(1+\xi+\dots+\xi^{k-1}) = 0 \\\\
+>   \Longrightarrow\;&
+>   (\xi -1)(1+\xi+\dots+\xi^{k-1}) = 0 \\\\
+> \end{align}
+> $$
+
+> [!tip] 定理1
+> $k$ が $D$ の倍数ならば, $P\_{k,n,D}=1/k.$
+
+> [!proof]
+> 式(1)より, 
+> $$
+> \begin{align*}
+>   P\_{k,n,D} 
+> \end{align*}
+> $$
+
+<!-- > [!default] default
+> lorem ipsum dolor sit amet
+
+> [!note] note
+> lorem ipsum dolor sit amet
+
+> [!tip] tip
+> lorem ipsum dolor sit amet
+
+> [!important] important
+> lorem ipsum dolor sit amet
+
+> [!warning] warning
+> lorem ipsum dolor sit amet
+
+> [!caution] caution
+> lorem ipsum dolor sit amet
+
+> [!proof] proof
+> lorem ipsum dolor sit amet -->
