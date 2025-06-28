@@ -1,13 +1,15 @@
 [book]
+title = "mathenautica"
 authors = ["volatile rye"]
 language = "jp"
 src = "src"
-title = "mathenautica"
+description = "volatile rye's math notebook."
 
 [output.html]
 theme = "src/theme"
 mathjax-support = true
 no-section-label = true
+git-repository-url = "https://github.com/rust-lang/mdBook"
 
 [output.html.fold]
 enable = true
@@ -15,6 +17,8 @@ level = 0
 
 [output.html.print]
 enable = false
+
+[build]
 
 [output.replace]
 command = "sh ../../scripts/replace.sh"
