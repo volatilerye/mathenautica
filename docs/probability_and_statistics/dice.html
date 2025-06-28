@@ -4,34 +4,52 @@
 <head>
 <!-- Book generated using mdBook -->
 <meta charset="utf-8"/>
-<title>HOME - MATH∃NAUTICA🌌</title>
+<title>サイコロの合計が $n$ の倍数になる確率 - MATH∃NAUTICA🌌</title>
 <!-- Custom HTML head -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" integrity="sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP" rel="stylesheet"/>
+<!-- The loading of KaTeX is deferred to speed up page rendering -->
+<script crossorigin="anonymous" defer="" integrity="sha384-cMkvdD8LoxVzGF/RPUKAcvmm49FQ0oxwDF3BGKtDXcEc+T1b2N+teh/OJfpU0jr6" src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"></script>
+<!-- To automatically render math in text elements, include the auto-render extension: -->
+<script crossorigin="anonymous" defer="" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" onload="renderMathInElement(document.body);" src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js"></script>
+<script>
+        document.addEventListener("DOMContentLoaded", function() {
+          renderMathInElement(
+              document.body,
+              {
+                  delimiters: [
+                      {left: "$$", right: "$$", display: true},
+                      {left: "$", right: "$", display: false},
+                  ]
+              });
+          });
+        </script>
 <meta content="volatile rye's math notebook." name="description"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="#ffffff" name="theme-color"/>
-<link href="favicon.svg" rel="icon"/>
-<link href="favicon.png" rel="shortcut icon"/>
-<link href="css/variables.css" rel="stylesheet"/>
-<link href="css/general.css" rel="stylesheet"/>
-<link href="css/chrome.css" rel="stylesheet"/>
+<link href="../favicon.svg" rel="icon"/>
+<link href="../favicon.png" rel="shortcut icon"/>
+<link href="../css/variables.css" rel="stylesheet"/>
+<link href="../css/general.css" rel="stylesheet"/>
+<link href="../css/chrome.css" rel="stylesheet"/>
 <!-- Fonts -->
-<link href="FontAwesome/css/font-awesome.css" rel="stylesheet"/>
-<link href="fonts/fonts.css" rel="stylesheet"/>
+<link href="../FontAwesome/css/font-awesome.css" rel="stylesheet"/>
+<link href="../fonts/fonts.css" rel="stylesheet"/>
 <!-- Highlight.js Stylesheets -->
-<link href="highlight.css" id="highlight-css" rel="stylesheet"/>
-<link href="tomorrow-night.css" id="tomorrow-night-css" rel="stylesheet"/>
-<link href="ayu-highlight.css" id="ayu-highlight-css" rel="stylesheet"/>
+<link href="../highlight.css" id="highlight-css" rel="stylesheet"/>
+<link href="../tomorrow-night.css" id="tomorrow-night-css" rel="stylesheet"/>
+<link href="../ayu-highlight.css" id="ayu-highlight-css" rel="stylesheet"/>
 <!-- Custom theme stylesheets -->
-<!-- MathJax -->
-<script async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <!-- Provide site root and default themes to javascript -->
 <script>
-            const path_to_root = "";
+            const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
         </script>
 <!-- Start loading toc.js asap -->
-<script src="toc.js"></script>
+<script src="../toc.js"></script>
 </head>
 <body>
 <div id="mdbook-help-container">
@@ -91,7 +109,7 @@
 <!-- populated by js -->
 <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
 <noscript>
-<iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+<iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
 </noscript>
 <div class="sidebar-resize-handle" id="sidebar-resize-handle">
 <div class="sidebar-resize-indicator"></div>
@@ -147,37 +165,43 @@
                 </script>
 <div class="content" id="content">
 <main><nav aria-label="Page navigation" class="prev-next-buttons">
-<a aria-keyshortcuts="Right" class="local-button active" href="probability_and_statistics/dice.html" rel="next" style="text-decoration: none;" title="サイコロの合計が \\(n\\) の倍数になる確率">
-<span class="where">サイコロの合計が \\(n\\) の倍数になる確率</span>
-<span class="arrow">→</span>
+<a aria-keyshortcuts="Left" class="local-button active" href="../index.html" rel="prev" style="text-decoration: none;" title="HOME">
+<span class="arrow">←</span>
+<span class="where">HOME</span>
 </a>
 </nav>
-<h1 id="welcome-to-mathnautica"><a class="header" href="#welcome-to-mathnautica">welcome to MATH∃NAUTICA</a></h1>
-<p>このサイトは私こと volatile rye (ボラティル ライ) がまったりと数学に関する記事をまとめるサイトです.</p>
+<h1 id="サイコロの合計が-n-の倍数になる確率"><a class="header" href="#サイコロの合計が-n-の倍数になる確率">サイコロの合計が $n$ の倍数になる確率</a></h1>
+<div class="alert note"><p class="alert note title">問題</p>
+
+どの目も出る確率が同様に確からしい $D$ 面サイコロを $n$ 個投げた.<br/>
+このとき, 出た目の合計が $k$ の倍数である確率はいくらか？
+</div>
+<p>この問題は <strong>母艦数 (生成関数)</strong> を用いるととても巧妙に一般の確率を求めることができる.</p>
+<p>生成関数</p>
 <nav aria-label="Page navigation" class="prev-next-buttons">
-<a aria-keyshortcuts="Right" class="local-button active" href="probability_and_statistics/dice.html" rel="next" style="text-decoration: none;" title="サイコロの合計が \\(n\\) の倍数になる確率">
-<span class="where">サイコロの合計が \\(n\\) の倍数になる確率</span>
-<span class="arrow">→</span>
+<a aria-keyshortcuts="Left" class="local-button active" href="../index.html" rel="prev" style="text-decoration: none;" title="HOME">
+<span class="arrow">←</span>
+<span class="where">HOME</span>
 </a>
 </nav></main>
 
 </div>
 </div>
 <nav aria-label="Page navigation" class="nav-wide-wrapper">
-<a aria-keyshortcuts="Right" aria-label="Next chapter" class="nav-chapters next" href="probability_and_statistics/dice.html" rel="next prefetch" title="Next chapter">
-<i class="fa fa-angle-right"></i>
+<a aria-keyshortcuts="Left" aria-label="Previous chapter" class="nav-chapters previous" href="../index.html" rel="prev" title="Previous chapter">
+<i class="fa fa-angle-left"></i>
 </a>
 </nav>
 </div>
 <script>
             window.playground_copyable = true;
         </script>
-<script src="elasticlunr.min.js"></script>
-<script src="mark.min.js"></script>
-<script src="searcher.js"></script>
-<script src="clipboard.min.js"></script>
-<script src="highlight.js"></script>
-<script src="book.js"></script>
+<script src="../elasticlunr.min.js"></script>
+<script src="../mark.min.js"></script>
+<script src="../searcher.js"></script>
+<script src="../clipboard.min.js"></script>
+<script src="../highlight.js"></script>
+<script src="../book.js"></script>
 <!-- Custom JS scripts -->
 </div>
 </body>
