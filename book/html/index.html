@@ -165,8 +165,8 @@
                 </script>
 <div class="content" id="content">
 <main><nav aria-label="Page navigation" class="prev-next-buttons">
-<a aria-keyshortcuts="Right" class="local-button active" href="probability_and_statistics/dice.html" rel="next" style="text-decoration: none;" title="サイコロの合計が $n$ の倍数になる確率">
-<span class="where">サイコロの合計が $n$ の倍数になる確率</span>
+<a aria-keyshortcuts="Right" class="local-button active" href="analysis/sum_sin_cos.html" rel="next" style="text-decoration: none;" title="$\sum_{k=0}^{n}\sin k\theta, \sum_{k=0}^{n}\cos k\theta$">
+<span class="where">$\sum_{k=0}^{n}\sin k\theta, \sum_{k=0}^{n}\cos k\theta$</span>
 <span class="arrow">→</span>
 </a>
 </nav>
@@ -179,8 +179,8 @@
 <p>オリキャラの <strong>Restio (リスティオ) くん</strong></p>
 </div>
 <nav aria-label="Page navigation" class="prev-next-buttons">
-<a aria-keyshortcuts="Right" class="local-button active" href="probability_and_statistics/dice.html" rel="next" style="text-decoration: none;" title="サイコロの合計が $n$ の倍数になる確率">
-<span class="where">サイコロの合計が $n$ の倍数になる確率</span>
+<a aria-keyshortcuts="Right" class="local-button active" href="analysis/sum_sin_cos.html" rel="next" style="text-decoration: none;" title="$\sum_{k=0}^{n}\sin k\theta, \sum_{k=0}^{n}\cos k\theta$">
+<span class="where">$\sum_{k=0}^{n}\sin k\theta, \sum_{k=0}^{n}\cos k\theta$</span>
 <span class="arrow">→</span>
 </a>
 </nav></main>
@@ -188,11 +188,27 @@
 </div>
 </div>
 <nav aria-label="Page navigation" class="nav-wide-wrapper">
-<a aria-keyshortcuts="Right" aria-label="Next chapter" class="nav-chapters next" href="probability_and_statistics/dice.html" rel="next prefetch" title="Next chapter">
+<a aria-keyshortcuts="Right" aria-label="Next chapter" class="nav-chapters next" href="analysis/sum_sin_cos.html" rel="next prefetch" title="Next chapter">
 <i class="fa fa-angle-right"></i>
 </a>
 </nav>
 </div>
+<!-- Livereload script (if served using the cli tool) -->
+<script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 <script>
             window.playground_copyable = true;
         </script>

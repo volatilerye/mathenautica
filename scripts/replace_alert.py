@@ -72,7 +72,7 @@ def replace_alerts_in_md_files(html: Path) -> None:
                                 "<details><summary>証明 (クリックで展開)</summary>"
                             )
                             end_details = "</details>"
-                            end_proof = '<div style="position: relative;"><span style="position: absolute; right: 0em; bottom: -1em; font-size: 1.5em;">■</span></div>'
+                            end_proof = '<div style="position: relative;"><span style="position: absolute; right: 0em; bottom: 0em; font-size: 1.5em;">■</span></div>'
                             tag.string = f"{begin_details}\n\n<p class='alert proof title'>{title}</p>\n{context}\n{end_proof}</p>\n{end_details}\n"
                         case _:
                             continue

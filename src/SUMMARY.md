@@ -2,10 +2,10 @@
 
 [HOME](./index.md)
 
-<!--
-NOTE: 
-KaTeX format ($...$, $$...$$) はうまく適用されないので、MathJax format (\\(\\)) を使うこと
--->
+# 解析学 (Analysis)
+
+- [$\sum_{k=0}^{n}\sin k\theta, \sum_{k=0}^{n}\cos k\theta$](./analysis/sum_sin_cos.md)
+
 
 # 確率論 (Probability Theory)
 
