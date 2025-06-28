@@ -9,7 +9,7 @@ description = "volatile rye's math notebook."
 theme = "src/theme"
 mathjax-support = true
 no-section-label = true
-git-repository-url = "https://github.com/rust-lang/mdBook"
+git-repository-url = "https://github.com/volatilerye/mathenautica"
 
 [output.html.fold]
 enable = true
