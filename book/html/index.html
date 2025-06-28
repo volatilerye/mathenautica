@@ -29,7 +29,6 @@
 <meta content="volatile rye's math notebook." name="description"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="#ffffff" name="theme-color"/>
-<link href="favicon.svg" rel="icon"/>
 <link href="favicon.png" rel="shortcut icon"/>
 <link href="css/variables.css" rel="stylesheet"/>
 <link href="css/general.css" rel="stylesheet"/>
@@ -193,22 +192,6 @@
 </a>
 </nav>
 </div>
-<!-- Livereload script (if served using the cli tool) -->
-<script>
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
 <script>
             window.playground_copyable = true;
         </script>

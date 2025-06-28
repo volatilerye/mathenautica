@@ -4,6 +4,8 @@
 > 1. $\displaystyle \sum_{k=0}^{n}\sin k\theta =\frac{\sin\frac{(n+1)\theta}{2}\sin\frac{n\theta}{2}}{\sin\frac{\theta}{2}}.$
 > 1. $\displaystyle \sum_{k=0}^{n}\cos k\theta =\frac{\sin\frac{(n+1)\theta}{2}\cos\frac{n\theta}{2}}{\sin\frac{\theta}{2}}.$
 
+Euler の公式 $e^{i\theta} = \cos\theta +i\sin\theta$ を用いると証明しやすい.
+
 > [!proof]
 > $$
 > \begin{align*}
