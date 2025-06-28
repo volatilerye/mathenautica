@@ -1,0 +1,87 @@
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Jost Light'), local('Jost-Light'),
+       url('../fonts/Jost-Light.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Jost';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Jost Light Italic'), local('Jost-LightItalic'),
+       url('../fonts/Jost-LightItalic.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Jost Regular'), local('Jost-Regular'),
+       url('../fonts/Jost-Regular.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Jost';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Jost Italic'), local('Jost-Italic'),
+       url('../fonts/Jost-Italic.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Jost SemiBold'), local('Jost-SemiBold'),
+       url('../fonts/Jost-SemiBold.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Jost';
+  font-style: italic;
+  font-weight: 600;
+  src: local('Jost SemiBold Italic'), local('Jost-SemiBoldItalic'),
+       url('../fonts/Jost-SemiBoldItalic.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Jost Bold'), local('Jost-Bold'),
+       url('../fonts/Jost-Bold.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Jost';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Jost Bold Italic'), local('Jost-BoldItalic'),
+       url('../fonts/Jost-BoldItalic.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Jost ExtraBold'), local('Jost-ExtraBold'),
+       url('../fonts/Jost-ExtraBold.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Jost';
+  font-style: italic;
+  font-weight: 800;
+  src: local('Jost ExtraBold Italic'), local('Jost-ExtraBoldItalic'),
+       url('../fonts/Jost-ExtraBoldItalic.ttf') format('ttf');
+}
+
+/* source-code-pro-500 - latin_vietnamese_latin-ext_greek_cyrillic-ext_cyrillic */
+@font-face {
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/source-code-pro-v11-all-charsets-500.woff2') format('woff2');
+}
