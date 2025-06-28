@@ -81,13 +81,18 @@
 <!-- Set the theme before any content is loaded, prevents flash -->
 <script>
             const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            alert(default_theme);
             let theme;
+            alert(theme);
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
+            alert(theme);
             const html = document.documentElement;
+            alert(html);
             html.classList.remove('light')
             html.classList.add(theme);
             html.classList.add("js");
+            alert(html);
         </script>
 <input class="hidden" id="sidebar-toggle-anchor" type="checkbox"/>
 <!-- Hide / unhide sidebar before it is displayed -->
