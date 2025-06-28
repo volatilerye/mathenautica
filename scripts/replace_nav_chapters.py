@@ -67,4 +67,4 @@ if __name__ == "__main__":
     for index, (title, md_path) in enumerate(TOC_LIST):
         replace_navigation(index, md_path)
         
-    replace_navigation(0, BASE_HTML_DIR / 'index.html')  # index.html
+    # replace_navigation(0, BASE_HTML_DIR / 'index.html')  # index.html
