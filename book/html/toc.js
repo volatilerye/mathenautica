@@ -8,7 +8,7 @@ class MDBookSidebarScrollbox extends HTMLElement {
         super();
     }
     connectedCallback() {
-        this.innerHTML = '<ol class="chapter"><li class="chapter-item affix "><a href="index.html">HOME</a></li><li class="chapter-item affix "><li class="part-title">解析学 (Analysis)</li><li class="chapter-item "><a href="analysis/sum_sin_cos.html">$&#92;sum_{k=0}^{n}&#92;sin k&#92;theta, &#92;sum_{k=0}^{n}&#92;cos k&#92;theta$</a></li><li class="chapter-item affix "><li class="part-title">確率論 (Probability Theory)</li><li class="chapter-item "><a href="probability_and_statistics/dice.html">サイコロの合計が $n$ の倍数になる確率</a></li><li class="chapter-item affix "><li class="part-title">test</li><li class="chapter-item "><a href="test.html">test page</a></li></ol>';
+        this.innerHTML = '<ol class="chapter"><li class="chapter-item affix "><a href="index.html">HOME</a></li><li class="chapter-item affix "><li class="part-title">解析学 (Analysis)</li><li class="chapter-item "><a href="analysis/sum_sin_cos.html">$&#92;sum_{k=0}^{n}&#92;sin k&#92;theta, &#92;sum_{k=0}^{n}&#92;cos k&#92;theta$</a></li><li class="chapter-item affix "><li class="part-title">確率論 (Probability Theory)</li><li class="chapter-item "><a href="probability/dice.html">サイコロの合計が $n$ の倍数になる確率</a></li><li class="chapter-item "><div>ガチャの確率を Markov 連鎖で求める (執筆中)</div></li><li class="chapter-item affix "><li class="part-title">test</li><li class="chapter-item "><a href="test.html">test</a></li></ol>';
         // Set the current, active page, and reveal it if it's hidden
         let current_page = document.location.href.toString().split("#")[0].split("?")[0];
         if (current_page.endsWith("/")) {

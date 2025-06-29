@@ -4,7 +4,7 @@
 <head>
 <!-- Book generated using mdBook -->
 <meta charset="utf-8"/>
-<title>test page - MATH∃NAUTICA🌌</title>
+<title>test - MATH∃NAUTICA🌌</title>
 <!-- Custom HTML head -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -81,18 +81,13 @@
 <!-- Set the theme before any content is loaded, prevents flash -->
 <script>
             const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
-            alert(default_theme);
             let theme;
-            alert(theme);
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
-            alert(theme);
             const html = document.documentElement;
-            alert(html);
             html.classList.remove('light')
             html.classList.add(theme);
             html.classList.add("js");
-            alert(html);
         </script>
 <input class="hidden" id="sidebar-toggle-anchor" type="checkbox"/>
 <!-- Hide / unhide sidebar before it is displayed -->
@@ -169,15 +164,48 @@
                 </script>
 <div class="content" id="content">
 <main><nav aria-label="Page navigation" class="prev-next-buttons">
-<a aria-keyshortcuts="Left" class="local-button active" href="probability_and_statistics/dice.html" rel="prev" style="text-decoration: none;" title="サイコロの合計が $n$ の倍数になる確率">
+<a aria-keyshortcuts="Left" class="local-button active" href="probability/dice.html" rel="prev" style="text-decoration: none;" title="サイコロの合計が $n$ の倍数になる確率">
 <span class="arrow">←</span>
 <span class="where">サイコロの合計が $n$ の倍数になる確率</span>
 </a>
 </nav>
 <h1 id="test-page"><a class="header" href="#test-page">test page</a></h1>
+<p>このページはデバッグテスト用です（デプロイ後のバグチェックのため. 今後削除予定）.</p>
+<hr/>
+<h2 id="the-quick-brown-fox-jumps-over-the-lazy-dog"><a class="header" href="#the-quick-brown-fox-jumps-over-the-lazy-dog">the quick brown fox jumps over the lazy dog.</a></h2>
 <p>lorem ipsum dolor sit amet.</p>
+<p>Euler's formula: $e^{iz} = \cos z + i\sin z.$</p>
+<p>$$e^{i\pi}+1=0.$$</p>
+<hr/>
+<blockquote>
+<p>lorem ipsum dolor sit amet.</p>
+</blockquote>
+<div class="alert default"><p class="alert title">default</p>
+lorem ipsum dolor sit amet.
+</div>
+<div class="alert note"><p class="alert note title">note</p>
+lorem ipsum dolor sit amet.
+</div>
+<div class="alert tip"><p class="alert tip title">tip</p>
+lorem ipsum dolor sit amet.
+</div>
+<div class="alert important"><p class="alert important title">important</p>
+lorem ipsum dolor sit amet.
+</div>
+<div class="alert warning"><p class="alert warning title">warning</p>
+lorem ipsum dolor sit amet.
+</div>
+<div class="alert caution"><p class="alert caution title">caution</p>
+lorem ipsum dolor sit amet.
+</div>
+<div class="alert proof"><details><summary>証明 (クリックで展開)</summary>
+<p class="alert proof title">proof</p>
+lorem ipsum dolor sit amet.
+<div style="position: relative;"><span style="position: absolute; right: 0em; bottom: 0em; font-size: 1.5em;">■</span></div>
+</details>
+</div>
 <nav aria-label="Page navigation" class="prev-next-buttons">
-<a aria-keyshortcuts="Left" class="local-button active" href="probability_and_statistics/dice.html" rel="prev" style="text-decoration: none;" title="サイコロの合計が $n$ の倍数になる確率">
+<a aria-keyshortcuts="Left" class="local-button active" href="probability/dice.html" rel="prev" style="text-decoration: none;" title="サイコロの合計が $n$ の倍数になる確率">
 <span class="arrow">←</span>
 <span class="where">サイコロの合計が $n$ の倍数になる確率</span>
 </a>
@@ -186,7 +214,7 @@
 </div>
 </div>
 <nav aria-label="Page navigation" class="nav-wide-wrapper">
-<a aria-keyshortcuts="Left" aria-label="Previous chapter" class="nav-chapters previous" href="probability_and_statistics/dice.html" rel="prev" title="Previous chapter">
+<a aria-keyshortcuts="Left" aria-label="Previous chapter" class="nav-chapters previous" href="probability/dice.html" rel="prev" title="Previous chapter">
 <i class="fa fa-angle-left"></i>
 </a>
 </nav>

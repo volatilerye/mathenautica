@@ -6,5 +6,6 @@
 <img src="static/restio.png" width="80%">
 </div>
 <div align="center">
+
 オリキャラの **Restio (リスティオ) くん**
 </div>

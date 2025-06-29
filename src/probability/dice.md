@@ -79,7 +79,7 @@ $k, D$ が特定の条件にある場合は, $P\_{n,k,D}$ は簡単に求める�
 > $$
 
 > [!tip] 定理3
-> $k=D+1$ ならば, $P\displaystyle P\_{n,k,D}=\frac{1}{k}(1-(-D)^{1-n}).$
+> $k=D+1$ ならば, $\displaystyle P\_{n,k,D}=\frac{1}{k}(1-(-D)^{1-n}).$
 
 > [!proof]
 > 式(2), (4)より, 
@@ -94,7 +94,7 @@ $k, D$ が特定の条件にある場合は, $P\_{n,k,D}$ は簡単に求める�
 
 ---
 
-## 計算量を削減する方法の検討
+## 計算量を削減する
 
 定理2, 3 の条件に該当しない場合, 簡単に $P\_{n,k,D}$ を導出する方法は (おそらく) ないと思う.
 ここでは, 少しでも計算量を削減するための工夫を考えよう.
@@ -160,8 +160,3 @@ $k=2,3,6$ のときは定理2, $k=7$ のときは定理3が適用できること
 |8|$\displaystyle\frac{1}{8}\left\\{1+2\left(\frac{\sqrt{2}}{6}\right)^n\cos\frac{3n\pi}{8}+2\left(\frac{\sqrt{2-\sqrt{2}}}{6}\right)^n\cos\frac{5n\pi}{8}+2\left(\frac{\sqrt{2+\sqrt{2}}}{6}\right)^n\cos\frac{7n\pi}{8}\right\\}$|
 |9|$\displaystyle\frac{1}{9}\left\\{1+2\left(\frac{\sqrt{2\cos(\pi/9)-1}}{6}\right)^n\cos\frac{n\pi}{9}+2\left(\frac{\sqrt{3+2\sin(\pi/18)-4\cos(2\pi/9)}}{6}\right)^n\cos\frac{2n\pi}{9}+2\left(\frac{\sqrt{1+2\cos(\pi/18)}}{6}\right)^n\cos\frac{4n\pi}{9}\right\\}$|
 |10|$\displaystyle\frac{1}{10}\left\\{1+2\cos\frac{n\pi}{5}+2\cos\frac{2n\pi}{5}+2\left(\frac{\sqrt{5-2\sqrt{5}}}{6}\right)^n\cos\frac{n\pi}{10}+2\left(\frac{\sqrt{5+2\sqrt{5}}}{6}\right)^n\cos\frac{3n\pi}{10}\right\\}$|
-
----
-
-> [!default]
-> 確率の問題に一見無関係そうな $\sin$ や $\cos$ などの三角関数が現れるのは面白いですね.
