@@ -6,7 +6,7 @@ src = "src"
 description = "volatile rye's math notebook."
 
 [output.html]
-theme = "src/theme"
+# theme = "src/theme"
 no-section-label = true
 git-repository-url = "https://github.com/volatilerye/mathenautica"
 
@@ -17,7 +17,6 @@ level = 0
 [output.html.print]
 enable = false
 
-[build]
 
 [output.replace]
 command = "sh ../../scripts/replace.sh"
