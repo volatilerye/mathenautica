@@ -9,6 +9,7 @@ description = "volatile rye's math notebook."
 theme = "src/theme"
 no-section-label = true
 git-repository-url = "https://github.com/volatilerye/mathenautica"
+additional-css = ["src/theme/css/custom.css"]
 
 [output.html.fold]
 enable = true
