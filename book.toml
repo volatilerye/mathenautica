@@ -18,11 +18,14 @@ level = 0
 enable = false
 
 
-[output.replace_book_to_site]
-command = "python -X utf8 ../../scripts/replace_book_to_site.py"
+# [output.replace_book_to_site]
+# command = "python -X utf8 ../../scripts/replace_book_to_site.py"
 
-[output.replace_alert]
-command = "python -X utf8 ../../scripts/replace_alert.py"
+# [output.replace_alert]
+# command = "python -X utf8 ../../scripts/replace_alert.py"
 
-[output.replace_nav_chapters]
-command = "python -X utf8 ../../scripts/replace_nav_chapters.py"
+# [output.replace_nav_chapters]
+# command = "python -X utf8 ../../scripts/replace_nav_chapters.py"
+
+[output.nop]
+command = "python -X utf8 ../../scripts/nop.py"
