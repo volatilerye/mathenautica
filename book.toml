@@ -19,5 +19,11 @@ enable = false
 
 [build]
 
-[output.replace]
-command = "sh ../../scripts/replace.sh"
+[output.replace_book_to_site]
+command = "python -X utf8 ../../scripts/replace_book_to_site.py"
+
+[output.replace_alert]
+command = "python -X utf8 ../../scripts/replace_alert.py"
+
+[output.replace_nav_chapters]
+command = "python -X utf8 ../../scripts/replace_nav_chapters.py"
