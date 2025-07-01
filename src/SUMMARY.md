@@ -11,5 +11,5 @@
 - [サイコロの合計が $n$ の倍数になる確率](probability/dice.md)
 - [ガチャの確率を Markov 連鎖で求める (執筆中)]()
 
-# test
-- [test](test.md)
+# その他
+- [このサイトの方針](policy.md)
