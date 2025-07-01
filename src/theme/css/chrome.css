@@ -169,7 +169,7 @@ html:not(.js) .left-buttons button {
   text-align: center;
   text-decoration: none;
   width: 90px;
-  /* border-radius: 5px; */
+  border-radius: 5px;
   background-color: var(--sidebar-bg);
 }
 
@@ -417,7 +417,6 @@ ul#searchresults span.teaser {
   margin-inline-start: 20px;
   margin-inline-end: 0;
   font-size: 0.8em;
-  text-decoration: none;
 }
 ul#searchresults span.teaser em {
   font-weight: bold;
@@ -740,46 +739,4 @@ html:not(.sidebar-resizing) .sidebar {
   text-align: center;
   /* mdbook's margin for h2 is way too large. */
   margin: 10px;
-}
-
-.prev-next-buttons {
-  font-weight: bold;
-  font-family: var(--verso-structure-font-family);
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  max-width: var(--verso-content-max-width);
-}
-
-.prev-next-buttons > * {
-  display: flex;
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-  color: black;
-  text-decoration: none;
-}
-
-.prev-next-buttons > [rel="prev"] {
-  justify-content: start;
-}
-
-.prev-next-buttons > [rel="next"] {
-  justify-content: end;
-}
-
-.prev-next-buttons .local-button .where {
-  margin: 0 0.3rem;
-  /* Fix the position relative to the arrows. */
-  position: relative;
-  top: 0.1rem;
-}
-
-.prev-next-buttons .arrow {
-  font-family: var(--verso-code-font-family);
-  font-size: 150%;
-}
-
-a.local-button span {
-  text-decoration: none;
 }
