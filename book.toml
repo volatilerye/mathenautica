@@ -10,6 +10,7 @@ theme = "src/theme"
 no-section-label = true
 git-repository-url = "https://github.com/volatilerye/mathenautica"
 additional-css = ["src/theme/css/custom.css"]
+additional-js = ["assets/fzf.umd.js", "assets/elasticlunr.js"]
 
 [output.html.fold]
 enable = true
@@ -18,15 +19,15 @@ level = 0
 [output.html.print]
 enable = false
 
+[output.replace_title]
+command = "python -X utf8 ../../scripts/replace_title.py"
 
-# [output.replace_book_to_site]
-# command = "python -X utf8 ../../scripts/replace_book_to_site.py"
+[output.replace_book_to_site]
+command = "python -X utf8 ../../scripts/replace_book_to_site.py"
 
-# [output.replace_alert]
-# command = "python -X utf8 ../../scripts/replace_alert.py"
+[output.replace_alert]
+command = "python -X utf8 ../../scripts/replace_alert.py"
 
-# [output.replace_nav_chapters]
-# command = "python -X utf8 ../../scripts/replace_nav_chapters.py"
+[output.replace_nav_chapters]
+command = "python -X utf8 ../../scripts/replace_nav_chapters.py"
 
-[output.nop]
-command = "python -X utf8 ../../scripts/nop.py"
