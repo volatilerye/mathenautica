@@ -26,15 +26,16 @@ def replace_navigation(index: int, md_path: Path) -> None:
         #     tag.decompose()
 
     # add custom navigation
-    navigation: str = '<nav class="prev-next-buttons" aria-label="Page navigation">'
+    navigation: str = ''
     if index > 0:
+        navigation += '<nav class="prev-next-buttons" aria-label="Page navigation">'
         prev_title, prev_md_path = TOC_LIST[index - 1]
         prev_html_path = os.path.relpath(
             (BASE_HTML_DIR / prev_md_path.parent / (prev_md_path.stem + ".html")),
             start=html_path.parent,
         )
         navigation += f"""
-            <a class="local-button active" href="{prev_html_path}" rel="prev" title="{prev_title}" style="text-decoration: none;" aria-keyshortcuts="Left">
+            <a class="local-button-active" href="{prev_html_path}" rel="prev" title="{prev_title}" style="text-decoration: none;" aria-keyshortcuts="Left">
                 <span class="arrow">←</span>
                 <span class="where">{prev_title}</span>
             </a>
@@ -46,9 +47,9 @@ def replace_navigation(index: int, md_path: Path) -> None:
             start=html_path.parent,
         )
         navigation += f"""
-            <a class="local-button active" href="{next_html_path}" rel="next" title="{next_title}" style="text-decoration: none;" aria-keyshortcuts="Right">
-                <span class="where">{next_title}</span>
-                <span class="arrow">→</span>
+            <a class="local-button-active" href="{next_html_path}" rel="next" title="{next_title}" style="text-decoration: none;" aria-keyshortcuts="Right">
+            <span class="where">{next_title}</span>
+            <span class="arrow">→</span>
             </a>
         """
     navigation += "</nav>"

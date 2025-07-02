@@ -11,3 +11,19 @@
     text-overflow: ellipsis;
     cursor: pointer;
 }
+
+.prev-next-buttons{
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.local-button-active[rel="prev"] {
+    justify-content: start;
+}
+.local-button-active[rel="next"]{
+    justify-content: end;
+}
+
+
