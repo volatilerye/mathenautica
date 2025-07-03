@@ -31,7 +31,7 @@
 > 文脈から位相の集合族 $\mathcal{O}$ が明らかな場合は, 位相空間 $(X,\mathcal{O})$ を単に $X$ と略記する場合がある.
 
 
-> [!definition] 例1.2 密着位相
+> [!example] 例1.2 密着位相
 > $\mathcal{O}=\\{\emptyset,X\\}$ は位相の定義から明らかに集合 $X$ 上の位相の一つになる.  
 > この位相を **密着位相** (indiscrete space) という.
 
