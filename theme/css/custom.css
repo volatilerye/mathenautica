@@ -26,4 +26,8 @@
     justify-content: end;
 }
 
+.invert-e  {
+    display: inline-block;
+    transform: scaleX(-1);
+}
 
