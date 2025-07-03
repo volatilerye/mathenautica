@@ -26,7 +26,7 @@
 > - 定理 (theorem)
 > - 系 (corollary)
 
-> [!note] 青アラート
+> [!info] 青アラート
 > 示したい事柄を提示する.
 > - 問題 (question, problem)
 > - 予想 (Conjecture)

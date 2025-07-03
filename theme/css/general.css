@@ -315,43 +315,87 @@ sup {
   line-height: 1;
 }
 
-.alert.note {
+.alert.info,
+.alert.conjecture,
+.alert.criterion,
+.alert.condition,
+.alert.problem,
+.alert.question,
+.alert.assumption,
+.alert.hypothesis,
+.alert.claim {
   border-left-color: #1f6feb;
 }
 
-.alert.note.title {
+.alert.info.title,
+.alert.conjecture.title,
+.alert.criterion.title,
+.alert.condition.title,
+.alert.problem.title,
+.alert.question.title,
+.alert.assumption.title,
+.alert.hypothesis.title,
+.alert.claim.title {
   color: #4493f8;
 }
 
-.alert.important {
+.alert.important,
+.alert.lemma,
+.alert.proposition {
   border-left-color: #8957e5;
 }
 
-.alert.important.title {
+.alert.important.title,
+.alert.lemma.title,
+.alert.proposition.title {
   color: #ab7df8;
 }
 
-.alert.warning {
+.alert.warning,
+.alert.definition,
+.alert.axiom,
+.alert.notation {
   border-left-color: #9e6a03;
 }
 
-.alert.warning.title {
+.alert.warning.title,
+.alert.definition.title,
+.alert.axiom.title,
+.alert.notation.title {
   color: #d29922;
 }
 
-.alert.tip {
+.alert.tip,
+.alert.theorem,
+.alert.corrollary,
+.alert.assertion,
+.alert.algorithm,
+.alert.property,
+.alert.summary,
+.alert.conclusion {
   border-left-color: #238636;
 }
 
-.alert.tip.title {
+.alert.tip.title,
+.alert.theorem.title,
+.alert.corrollary.title,
+.alert.assertion.title,
+.alert.algorithm.title,
+.alert.property.title,
+.alert.summary.title,
+.alert.conclusion.title {
   color: #3fb950;
 }
 
-.alert.caution {
+.alert.caution,
+.alert.remark,
+.alert.note {
   border-left-color: #da3633;
 }
 
-.alert.caution.title {
+.alert.caution.title,
+.alert.remark.title,
+.alert.note.title {
   color: #f85149;
 }
 

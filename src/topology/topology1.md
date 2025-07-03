@@ -1,6 +1,6 @@
 # #1 位相空間と諸概念の定義
 
-> [!note] 位相空間のモチベーション
+> [!claim] 位相空間のモチベーション
 > Euclid空間 $\mathbb{R}^n$ などの空間は連続や収束・発散、開集合・閉集合・閉包などの概念があるが、
 > これらの定義は実数に依存したものになっているので, そのままでは他の空間に適用することができない.  
 > 
@@ -10,7 +10,7 @@
 
 ## 位相空間・開集合
 
-> [!warning] 定義1.1 開集合による位相空間の定義
+> [!definition] 定義1.1 開集合による位相空間の定義
 > $X$ を空でない集合とする.
 > 集合族 $\mathcal{O}\subset 2^X$ が次の3条件を満たすとき, $\mathcal{O}$ は集合 $X$ 上の **位相** (topology) であるという.
 >
@@ -22,28 +22,28 @@
 > $\mathcal{O}$ に属する $X$ の部分集合 $O$ を **開集合** (open set, または厳密に **$\mathcal{O}$-開集合**, $\mathcal{O}$-open set) といい,  
 > 集合 $X$ を **台集合** (underlying set, または単に **台**), 集合 $X$ の元を **点** (point) という.
 
-> [!caution] 注意
+> [!remark] 注意
 > 条件2はあるいは次のように置き換えることができる.
 > $$O_1,O_2,\dots,O_n\in\mathcal{O}\\;\Longrightarrow\\;\bigcap_{k=1}^{n} O_k\in\mathcal{O}.$$
 > ただし, 条件3は開集合が無限個でも構わないのに対して, 条件2の開集合の共通集合は **有限個** でなければならない.
 
-> [!caution] 注意
+> [!remark] 注意
 > 文脈から位相の集合族 $\mathcal{O}$ が明らかな場合は, 位相空間 $(X,\mathcal{O})$ を単に $X$ と略記する場合がある.
 
 
-> [!default] 例1.2 密着位相
+> [!definition] 例1.2 密着位相
 > $\mathcal{O}=\\{\emptyset,X\\}$ は位相の定義から明らかに集合 $X$ 上の位相の一つになる.  
 > この位相を **密着位相** (indiscrete space) という.
 
-> [!default] 例1.3 離散位相
+> [!example] 例1.3 離散位相
 > $\mathcal{O}=2^X$ は位相の定義から明らかに集合 $X$ 上の位相の一つになる.  
 > この位相を **離散位相** (discrete space) という.
 
-> [!default] 例1.4 通常の位相 (自然な位相)
+> [!example] 例1.4 通常の位相 (自然な位相)
 > $n$次元Euclid空間 $\mathbb{R}^n$ の開集合系 $\\mathcal{O}$ は $\mathbb{R}^n$ 上の位相の一つである.  
 > この位相を $\mathbb{R}^n$ の**通常の位相** (standard topology, または **自然な位相**, natural topology) という.
 
-> [!default] 例1.5 距離位相
+> [!example] 例1.5 距離位相
 > 距離空間 $(X, d)$ の開集合系 $\\mathcal{O}$ は $X$ 上の位相の一つである.  
 > この位相を $X$ の $d$ によって定まる **距離位相** (metric topology) という.
 >
@@ -53,11 +53,11 @@
 
 ## 閉集合
 
-> [!warning] 定義1.6 閉集合
+> [!definition] 定義1.6 閉集合
 > 位相空間 $(X, \mathcal{O})$ において, 部分集合 $F\in X$ の補集合 $F^c:=X-F$ が $\mathcal{O}$ に属するとき, 
 > $F$ を **閉集合** (closed set, または厳密に **$\mathcal{O}$-閉集合**, $\mathcal{O}$-closed set) という.
 
-> [!caution] 注意
+> [!remark] 注意
 > 部分集合 $A\in X$ が開集合に属さないからといって, 閉集合に属する**とは限らない** (逆も然りである).
 > 
 > 例えば, 位相空間 $(X, \mathcal{O})$ において, 空集合 $\emptyset$ と $X$ は各定義から開集合であり, また閉集合でもある (**開かつ閉集合**, clopen set).
@@ -69,7 +69,7 @@
 
 以降, 位相空間 $(X,\mathcal{O})$ について考える.
 
-> [!caution] 定義1.7 内点, 内部 (開核)
+> [!definition] 定義1.7 内点, 内部 (開核)
 > $A\subset X$ に包まれる $\mathcal{O}$-開集合全体の和集合は,
 > 開集合の定義より $A$ に包まれる最大の $\mathcal{O}$-開集合である.
 >

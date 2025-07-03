@@ -1,6 +1,6 @@
 # $\sum_{k=0}^{n}\sin k\theta, \sum_{k=0}^{n} \cos k\theta$
 
-> [!tip] 定理1&emsp;$\sum_{k=0}^{n}\sin k\theta, \sum_{k=0}^{n}\cos k\theta$
+> [!theorem] 定理1&emsp;$\sum_{k=0}^{n}\sin k\theta, \sum_{k=0}^{n}\cos k\theta$
 > $\theta \neq 2n\pi\\;(n\in\mathbb{Z})$ のとき,
 > 1. $\displaystyle \sum_{k=0}^{n}\sin k\theta =\frac{\sin\frac{(n+1)\theta}{2}\sin\frac{n\theta}{2}}{\sin\frac{\theta}{2}}.$
 > 1. $\displaystyle \sum_{k=0}^{n}\cos k\theta =\frac{\sin\frac{(n+1)\theta}{2}\cos\frac{n\theta}{2}}{\sin\frac{\theta}{2}}.$

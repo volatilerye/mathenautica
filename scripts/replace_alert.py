@@ -7,6 +7,45 @@ from bs4 import BeautifulSoup
 
 BASE_HTML_DIR: Final[Path] = Path("../html")
 
+alert_tags: Final[set] = {
+    # custom alert: default quotation
+    "default",
+    # github flavor markdown alert
+    "info",  # renamed from 'note' to conflict with math alert
+    "tip",
+    "important",
+    "warning",
+    "caution",
+    # custom alert: for mathenautics
+    "proof",
+    "theorem",
+    "lemma",
+    "proposition",
+    "corollary",
+    "conjecture",
+    "criterion",
+    "assertion",
+    "definition",
+    "example",
+    "exercise",
+    "condition",
+    "problem",
+    "algorithm",
+    "question",
+    "axiom",
+    "property",
+    "assumption",
+    "hypothesis",
+    "remark",
+    "note",
+    "case",
+    "notation",
+    "claim",
+    "summary",
+    "acknowledgment",
+    "conclusion",
+}
+
 
 def replace_alerts_in_md_files(html: Path) -> None:
     with html.open(encoding="utf-8") as f:
@@ -17,56 +56,32 @@ def replace_alerts_in_md_files(html: Path) -> None:
         p = tag.find("p")
         if p:
             matched = re.match(
-                r"<p>\[\!(default|note|tip|important|warning|caution|proof)\] *(.*)",
+                rf"<p>\[\!({'|'.join(alert_tags)})\] *(.*)",
                 str(p).split("\n")[0],
                 flags=re.IGNORECASE,
             )
             if matched:
                 # alert
                 alert_type = matched.group(1).lower()
-                match alert_type:
-                    case "default":
-                        tag.name = "div"
-                        tag["class"] = "alert default"
-                    case "note":
-                        tag.name = "div"
-                        tag["class"] = "alert note"
-                    case "tip":
-                        tag.name = "div"
-                        tag["class"] = "alert tip"
-                    case "important":
-                        tag.name = "div"
-                        tag["class"] = "alert important"
-                    case "warning":
-                        tag.name = "div"
-                        tag["class"] = "alert warning"
-                    case "caution":
-                        tag.name = "div"
-                        tag["class"] = "alert caution"
-                    case "proof":
-                        tag.name = "div"
-                        tag["class"] = "alert proof"
-                    case _:
-                        continue
+                if alert_type in alert_tags:
+                    tag.name = "div"
+                    tag["class"] = f"alert {alert_type}"
+                else:
+                    continue
                 # title
                 title = matched.group(2)
-                context = '\n'.join(str(tag).replace(f'<div class="{tag["class"]}">\n', '').replace("\n</div>", "").split("\n", 1)[1:])
+                context = "\n".join(
+                    str(tag)
+                    .replace(f'<div class="{tag["class"]}">\n', "")
+                    .replace("\n</div>", "")
+                    .split("\n", 1)[1:]
+                )
                 if tag["class"]:
                     match alert_type:
                         case "default":
                             tag.string = (
                                 f"<p class='alert title'>{title}</p>\n{context}</p>\n"
                             )
-                        case "note":
-                            tag.string = f"<p class='alert note title'>{title}</p>\n{context}</p>\n"
-                        case "tip":
-                            tag.string = f"<p class='alert tip title'>{title}</p>\n{context}</p>\n"
-                        case "important":
-                            tag.string = f"<p class='alert important title'>{title}</p>\n{context}</p>\n"
-                        case "warning":
-                            tag.string = f"<p class='alert warning title'>{title}</p>\n{context}</p>\n"
-                        case "caution":
-                            tag.string = f"<p class='alert caution title'>{title}</p>\n{context}</p>\n"
                         case "proof":
                             begin_details = (
                                 "<details><summary>証明 (クリックで展開)</summary>"
@@ -75,7 +90,7 @@ def replace_alerts_in_md_files(html: Path) -> None:
                             end_proof = '<div style="position: relative;"><span style="position: absolute; right: 0em; bottom: 0em; font-size: 1.5em;">■</span></div>'
                             tag.string = f"{begin_details}\n\n<p class='alert proof title'>{title}</p>\n{context}\n{end_proof}</p>\n{end_details}\n"
                         case _:
-                            continue
+                            tag.string = f"<p class='alert {alert_type} title'>{title}</p>\n{context}</p>\n"
 
     with html.open("w", encoding="utf-8") as f:
         f.write(soup.encode(formatter=None).decode("utf-8"))
