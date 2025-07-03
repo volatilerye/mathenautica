@@ -11,6 +11,7 @@ no-section-label = true
 git-repository-url = "https://github.com/volatilerye/mathenautica"
 additional-css = ["theme/css/custom.css"]
 additional-js = ["assets/fzf.umd.js", "assets/elasticlunr.js"]
+site-url = "/mathenautica/"
 
 [output.html.fold]
 enable = true
