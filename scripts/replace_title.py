@@ -19,8 +19,8 @@ def replace_book_to_site(html: Path) -> None:
 def invert_e(html: Path) -> None:
     with html.open(encoding="utf-8") as f:
         replaced = re.sub(
-            r"(?<!<title>)(.*)MATHENAUTICA(.*)",
-            r'\1MATH<div class="invert-e">E</div>NAUTICA\2',
+            r"MATHENAUTICA(?!\</title\>)(.*)",
+            r'MATH<div class="invert-e">E</div>NAUTICA\1',
             f.read(),
         )
 

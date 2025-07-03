@@ -23,8 +23,12 @@ enable = false
 [output.replace_title]
 command = "python -X utf8 ../../scripts/replace_title.py"
 
+[output.replace_head]
+command = "python -X utf8 ../../scripts/replace_head.py"
+
 [output.replace_book_to_site]
 command = "python -X utf8 ../../scripts/replace_book_to_site.py"
+
 
 [output.replace_alert]
 command = "python -X utf8 ../../scripts/replace_alert.py"
