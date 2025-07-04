@@ -16,7 +16,7 @@ def replace_ogp(html: Path) -> None:
 
         replaced = re.sub(
             r'<meta content="" property="og:title"/>',
-            f'<meta content="{repr(matched.group(1))[1:-1]}" property="og:title"/>',
+            f'<meta content="MATHENAUTICA" property="og:title"/>',
             replaced
         )
         replaced = re.sub(
