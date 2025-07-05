@@ -47,9 +47,8 @@ alert_tags: Final[set] = {
 }
 
 
-def replace_alerts_in_md_files(html: Path) -> None:
-    with html.open(encoding="utf-8") as f:
-        soup = BeautifulSoup(f.read(), "html.parser")
+def replace_alerts_in_md_files(html_text: str) -> str:
+    soup = BeautifulSoup(html_text, "html.parser")
 
     for tag in soup.find_all("blockquote"):
         matched: re.Match[str] | None = None
@@ -92,10 +91,4 @@ def replace_alerts_in_md_files(html: Path) -> None:
                         case _:
                             tag.string = f"<p class='alert {alert_type} title'>{title}</p>\n{context}</p>\n"
 
-    with html.open("w", encoding="utf-8") as f:
-        f.write(soup.encode(formatter=None).decode("utf-8"))
-
-
-if __name__ == "__main__":
-    for html_path in BASE_HTML_DIR.glob("**/*.html"):
-        replace_alerts_in_md_files(html_path)
+    return soup.encode(formatter=None).decode("utf-8")
