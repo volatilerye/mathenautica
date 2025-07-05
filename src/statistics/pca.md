@@ -19,7 +19,7 @@
 > [!definition] 定義1&emsp;固有値・固有ベクトル
 > 体 $K$ 上の $n$ 次正方行列 $A$ に対して 
 > $$\begin{equation}A\bm{x}=\lambda\bm{x}\end{equation}$$
-> であるような $\lambda\in K$ と $\bm{x}\in K^n-\{\bm{0}\}$ が存在するとき,   
+> であるような $\lambda\in K$ と $\bm{x}\in K^n-\\{\bm{0}\\}$ が存在するとき,   
 > $\lambda$ を **固有値** (*eigenvalue*), $\bm{x}$ を **固有ベクトル** (*eigenvector*) という.
 
 > [!Theorem] 定理2&emsp;固有値の求め方
@@ -33,9 +33,9 @@
 
 > [!theorem] 定理3&emsp;固有値・固有ベクトルの存在
 > - $n$ 次実行列は重複度を含め固有値を 0 個以上 $n$ 個以下持つ.
-> - $n$ 次実行列は重複度を含め固有値を $n$ 個持つ.
+> - $n$ 次複素行列は重複度を含め固有値を $n$ 個持つ.
 
-
+> この記事は執筆途中です...
 
 > [!acknowledgment] 参考文献
 > - 書籍
