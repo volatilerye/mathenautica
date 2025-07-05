@@ -14,5 +14,9 @@
 - [サイコロの合計が $n$ の倍数になる確率](probability/dice.md)
 - [ガチャの確率を Markov 連鎖で求める (執筆中)]()
 
+# 統計論 (Statistics)
+
+- [主成分分析と固有値・固有ベクトルの関係](statistics/pca.md)
+
 # その他
 - [このサイトの方針](policy.md)
