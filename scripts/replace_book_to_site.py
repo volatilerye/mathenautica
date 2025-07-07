@@ -1,10 +1,3 @@
-from pathlib import Path
-from typing import Final
-
-
-BASE_HTML_DIR: Final[Path] = Path("../html")
-
-
 def replace_book_to_site(html_text: str) -> str:
     replaced = (
         html_text.replace(

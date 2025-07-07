@@ -1,10 +1,7 @@
 import re
-from pathlib import Path
 from typing import Final
 
 from bs4 import BeautifulSoup
-
-BASE_HTML_DIR: Final[Path] = Path("../html")
 
 alert_tags: Final[set] = {
     # custom alert: default quotation

@@ -1,5 +1,4 @@
 import re
-from pathlib import Path
 from typing import Final
 
 EXCLUDE_INVERT_E: Final[set[str]] = {
