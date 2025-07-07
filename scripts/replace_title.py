@@ -2,10 +2,9 @@ import re
 from pathlib import Path
 from typing import Final
 
-BASE_HTML_DIR: Final[Path] = Path("../html")
 EXCLUDE_INVERT_E: Final[set[str]] = {
-    '<meta content="MATHENAUTICA" property="og:site_name"/>',
-    r'^<title>(.+) \- MATHENAUTICA</title>$'
+    r'(\s*)<meta content="MATHENAUTICA" property="og:site_name"/>',
+    r'(\s*)<title>(.+) - MATHENAUTICA</title>'
 }
 
 def replace_custom_menu_title(html_text: str) -> str:
@@ -16,7 +15,7 @@ def replace_custom_menu_title(html_text: str) -> str:
 
 def invert_e(html_text: str) -> str:
     replaced = html_text
-    matched = re.finditer(r"^(.*)(MATHENAUTICA)(.*)$", replaced, flags = re.MULTILINE)
+    matched = re.finditer(r"(.*)(MATHENAUTICA)(.*)", replaced)
     for match in list(matched)[::-1]:
         for exclude in EXCLUDE_INVERT_E:
             if re.match(exclude, match.group(0)):
