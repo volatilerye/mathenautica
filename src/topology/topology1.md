@@ -51,7 +51,7 @@
 
 > [!example] 例1.6&emsp;相対位相
 > $(X,\mathcal{O})$ を位相空間, $A\subset X$ を空でない部分集合としたとき, 
-> $$\mathcal{O}_A = \{A\capU \mid U\in\mathcal{O}\}$$
+> $$\mathcal{O}_A = \\{A\cap U \mid U\in\mathcal{O}\\}$$
 > は $A$ 上の一つの位相であり, この位相 $\mathcal{O}_A$ を集合 $A$ の上の $\mathcal{O}$ に関する **相対位相** (*subspace topology*, *relative topology*, or *induced topology*) という.
 > 
 > 位相空間 $(A, \mathcal{O}_A)$ を位相空間 $(X, \mathcal{O})$ の **部分空間** (*subspace*) という.
