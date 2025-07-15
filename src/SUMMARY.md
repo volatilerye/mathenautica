@@ -4,6 +4,8 @@
 
 # 位相幾何学 (Topology)
 - [#1 位相空間と諸概念の定義](topology/topology1.md)
+- [#2 開核作用素・閉包作用素・近傍系](topology/topology2.md)
+<!-- - [積位相のコンパクト性と Tychonoff の定理](topology/tychonoff.md) -->
 
 # 解析学 (Analysis)
 
