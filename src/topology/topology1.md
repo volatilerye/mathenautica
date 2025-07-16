@@ -110,8 +110,8 @@
 また, 次の関係が成立する.
 
 > [!theorem] 定理1.13 内包と外部の関係
-> 1. $A^ci = .A^{ac}.$
-> 1. $A^ic = .A^{ca}.$
+> 1. $A^{ci} = A^{ac}.$
+> 1. $A^{ic} = A^{ca}.$
 
 > [!proof]
 > **1.**
@@ -128,7 +128,7 @@
 ## 集積点, 孤立点
 
 > [!definition] 定義1.14&emsp;集積点, 孤立点
-> 点 $x\in X$ が集合 $A-\\{x\\}$ の触点であるとき, $x$ を $A$ の **集積点** (*accumulation point*), あるいは **限界点** (*limit point*) という.
+> 点 $x\in X$ が集合 $A-\\{x\\}$ の触点であるとき, $x$ を $A$ の **集積点** (*accumulation point*), あるいは **極限点** (*limit point*) という.
 >
 > 点 $x\in X$ が $x\in A$ かつ集積点でないとき, $x$ を $A$ の **孤立点** (*isolated point*) という.
 
