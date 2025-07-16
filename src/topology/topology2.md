@@ -1,14 +1,40 @@
-# #2 開核作用素・閉包作用素・近傍系
+# #2 閉集合・開核作用素・閉包作用素・近傍系
 
-> [!info] お知らせ
-> このページは現在執筆途中です...
+## 閉集合
+
+> [!definition] 定義2.1&emsp;閉集合
+> 位相空間 $(X,\mathcal{O})$ の閉集合族 $\mathcal{A}$ において, 以下が成立する.
+>
+> 1. $\emptyset,X\in\mathcal{A}.$
+> 1. $F_1,F_2\in\mathcal{A}\\;\Longrightarrow\\;F_1\cup F_2\in\mathcal{A}.$
+> 1. $\displaystyle\forall\lambda\in\Lambda[F_\lambda\in\mathcal{A}]\\;\Longrightarrow\\;\bigcap_{\lambda\in\Lambda}F_\lambda\in\mathcal{A}.$
+
+> [!proof]
+> **1.**
+>
+> $\emptyset,X$ の補集合はそれぞれ $X,\emptyset$ であり, 開集合の定義より $\emptyset,X\in\mathcal{O}$ であるから
+> $\emptyset,X\in\mathcal{A}.$
+>
+> **2.**
+>
+> $F_1^c,F_2^c\in\mathcal{O}\\;\Longrightarrow\\;F_1^c\cap F_2^c = (F_1\cap F_2)^c\in\mathcal{O}\\;F_1\cup F_2\in\mathcal{A}.$  
+>
+> **3.**
+> 
+> $\displaystyle\forall\lambda\in\Lambda[F_\lambda\in\mathcal{A}]
+> \\;\Longrightarrow\\;\forall\lambda\in\Lambda[F_\lambda^c\in\mathcal{O}]
+> \\;\Longrightarrow\\;\left(\bigcup_{\lambda\in\Lambda}F_\lambda^c\right)\in\mathcal{O}
+> \\;\Longrightarrow\\;\left(\bigcap_{\lambda\in\Lambda}F_\lambda\right)^c\in\mathcal{O}
+> \\;\Longrightarrow\\;\bigcap_{\lambda\in\Lambda}F_\lambda\in\mathcal{A}.$ 
+
+
 
 ## 開核作用素
 
-> [!definition] 定義2.1&emsp;開核作用素
+> [!definition] 定義2.2&emsp;開核作用素
 > 位相空間 $(X,\mathcal{O})$ において, $A$ から $A^\circ$ へ移す写像 ${}^\circ: 2^X\to2^X$ を **開核作用素** (*interior operator*)という.
 
-> [!theorem] 定理2.2&emsp;開核作用素の性質
+> [!theorem] 定理2.3&emsp;開核作用素の性質
 > 位相空間 $(X,\mathcal{O})$ の開核作用素は次の性質をもつ.
 >
 > 1. $X^\circ = X.$
@@ -42,10 +68,10 @@
 
 ## 閉包作用素
 
-> [!definition] 定義2.3&emsp;開核作用素
+> [!definition] 定義2.4&emsp;開核作用素
 > 位相空間 $(X,\mathcal{O})$ において, $A$ から $\overline{A}$ へ移す写像 $\overline{\\;\cdot\\;}: 2^X\to2^X$ を **閉包作用素** (*closure operator*)という.
 
-> [!theorem] 定義2.4&emsp;閉包作用素の性質
+> [!theorem] 定義2.5&emsp;閉包作用素の性質
 > 位相空間 $(X,\mathcal{O})$ の開核作用素は次の性質をもつ.
 >
 > 1. $\overline{\emptyset} = \emptyset.$
@@ -80,7 +106,7 @@
 
 ## 近傍系
 
-> [!theorem] 定理2.5&emsp;近傍系の性質
+> [!theorem] 定理2.6&emsp;近傍系の性質
 > 位相空間 $(X,\mathcal{O})$ の近傍系は次の性質をもつ.
 >
 > 1. ${}^\forall a\in X[X\in\mathcal{N}(a) \land (N\in\mathcal{N}(a)\\;\Longrightarrow\\; a\in N)].$

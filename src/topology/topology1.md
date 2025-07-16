@@ -11,7 +11,7 @@
 > $X$ を空でない集合とする.
 > 集合族 $\mathcal{O}\subset 2^X$ が次の3条件を満たすとき, $\mathcal{O}$ は集合 $X$ 上の **位相** (*topology*) であるという.
 >
-> 1. $\emptyset\in\mathcal{O},\\;X\in\mathcal{O}.$
+> 1. $\emptyset,X\in\mathcal{O}.$
 > 1. $O_1,O_2\in\mathcal{O}\\;\Longrightarrow\\;O_1\cap O_2\in\mathcal{O}.$
 > 1. $\displaystyle\forall\lambda\in\Lambda[O_\lambda\in\mathcal{O}]\\;\Longrightarrow\\;\bigcup_{\lambda\in\Lambda}O_\lambda\in\mathcal{O}.$
 >
@@ -56,7 +56,6 @@
 > 
 > 位相空間 $(A, \mathcal{O}_A)$ を位相空間 $(X, \mathcal{O})$ の **部分空間** (*subspace*) という.
 
----
 
 ## 閉集合
 
@@ -70,9 +69,8 @@
 > 例えば, 位相空間 $(X, \mathcal{O})$ において, 空集合 $\emptyset$ と $X$ は各定義から開集合であり, また閉集合でもある (**開かつ閉集合**, *clopen set*).
 
 
----
 
-##  内部(開核)・内点, 閉包・触点, 外部・外点, 境界・境界点
+##  内部(開核), 閉包, 外部, 境界点
 
 以降, 位相空間 $(X,\mathcal{O})$ について考える.
 
@@ -100,7 +98,47 @@
 >  
 > $A^f$ の点を $A$ の **境界点** (*exterior point*) という.
 
-> [!definition] 定義1.12&emsp;近傍, 近傍系, 開近傍, 閉近傍
+## 内部(開核)・閉包・外部・境界点の関係
+
+定義より以下の命題が直ちに従う.
+
+> [!proposition] 命題1.12 内部・境界点・外部
+> $X = \operatorname{int}(A) \sqcup \operatorname{bd}(A) \sqcup \operatorname{ext}(A).$ 
+> 
+> ここで $A\sqcup B$ は非交和 ($A\cap B = \emptyset$) を示す.
+
+また, 次の関係が成立する.
+
+> [!theorem] 定理1.13 内包と外部の関係
+> 1. $A^ci = .A^{ac}.$
+> 1. $A^ic = .A^{ca}.$
+
+> [!proof]
+> **1.**
+> 
+> $A^{cic}$ は $A$ を包む閉集合であるから, $A^a \subset A^{cic}\\;\Longrightarrow A^{ci}\subset A^{ac}.$ 
+> また, $A^{cac}$ は $A$ に包まれる開集合であるから, $A^{cac} \subset A^i\\;\Longrightarrow\\; A^{ic}\subset A^{ca}.$ 
+> ここで $A$ を $A^c$ に置換すれば $A^{cic}\subset A^{a} \\;\Longrightarrow\\; A^{ac}\subset A^{ci}$ 
+> であるから, 従って $A^ci = .A^{ac}.$
+>
+> **2.**
+>
+> 1の式の $A$ を $A^c$ に置換すれば示すことができる.
+
+## 集積点, 孤立点
+
+> [!definition] 定義1.14&emsp;集積点, 孤立点
+> 点 $x\in X$ が集合 $A-\\{x\\}$ の触点であるとき, $x$ を $A$ の **集積点** (*accumulation point*), あるいは **限界点** (*limit point*) という.
+>
+> 点 $x\in X$ が $x\in A$ かつ集積点でないとき, $x$ を $A$ の **孤立点** (*isolated point*) という.
+
+> [!remark] 注意
+> $A$ の集積点は $A$ に属するとは限らない. (孤立点は $A$ に属する.)
+
+
+## 近傍, 近傍系
+
+> [!definition] 定義1.15&emsp;近傍, 近傍系, 開近傍, 閉近傍
 > $N\subset X$ において $a\in X$ が$N$ の内点であるとき, $N$ は $a$ の**近傍** (*neighborhood*) であるという.
 > 
 > とくに, 点 $a$ を含む開集合および閉集合はすべて点 $a$ の近傍であり, それぞれ点 $a$ の **開近傍** (*open neighborhood*), **閉近傍** (*closed neighborhood*) という.
