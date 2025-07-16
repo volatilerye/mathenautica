@@ -9,3 +9,11 @@
 
 オリキャラの **Restio (リスティオ) くん**
 </div>
+
+---
+
+## Q. このサイトに誤りがあったら？
+
+お手数ですが下記よりお知らせください
+- [Github Issues](https://github.com/volatilerye/mathenautica/issues/new) (※ Github アカウントが必要です)
+- [X (Twitter) DM](https://x.com/volatile_) (※ 雑用アカウントなのでセンシティブなツイートが含まれていることをご了承ください)

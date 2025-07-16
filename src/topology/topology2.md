@@ -92,6 +92,9 @@
 > 1, 3 は定義より明らか.
 >
 > **2.**
->
+> 
+> $N_1,N_2\in\mathcal{N}(a)\\;\longrightarrow\\;a\in N_1,a\in N_1,N_2\\;\Longrightarrow\\;a\in N_1\cap N_2\in\mathcal{N}(a).$
+> 
 > **4.**
 > 
+> $M$ について $M=N^\circ\in\mathcal{N}(a)$ と置けばよい.
