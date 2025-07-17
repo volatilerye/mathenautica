@@ -2,7 +2,7 @@
 
 ## 閉集合
 
-> [!definition] 定義2.1&emsp;閉集合
+> [!theorem] 定理2.1&emsp;閉集合
 > 位相空間 $(X,\mathcal{O})$ の閉集合族 $\mathcal{A}$ において, 以下が成立する.
 >
 > 1. $\emptyset,X\in\mathcal{A}.$
