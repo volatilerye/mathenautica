@@ -27,8 +27,6 @@
 # 確率論 (Probability Theory)
 
 - [サイコロの合計が $n$ の倍数になる確率](probability/dice.md)
-- [ガチャの確率を Markov 連鎖で求める (執筆中)]()
 
-# 統計論 (Statistics)
-
-- [主成分分析と固有値・固有ベクトルの関係 (執筆中)]()
+# その他
+- [最小包含矩形問題 (Minimum bounding rectangle, MBR)(執筆中)](other/mbr.md)
