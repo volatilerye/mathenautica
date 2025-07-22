@@ -14,6 +14,7 @@ alert_tags: Final[set] = {
     "caution",
     # custom alert: for mathenautics
     "proof",
+    "proof-without-details",
     "theorem",
     "lemma",
     "proposition",
@@ -79,11 +80,14 @@ def replace_alerts_in_md_files(html_text: str) -> str:
                             )
                         case "proof":
                             begin_details = (
-                                "<details><summary>証明 (クリックで展開)</summary>"
+                                "<details><summary><b>証明</b> (クリックで展開)</summary>"
                             )
                             end_details = "</details>"
-                            end_proof = '<div style="position: relative;"><span style="position: absolute; right: 0em; bottom: 0em; font-size: 1.5em;">■</span></div>'
-                            tag.string = f"{begin_details}\n\n<p class='alert proof title'>{title}</p>\n{context}\n{end_proof}</p>\n{end_details}\n"
+                            end_proof = '<div style="text-align: right;"><span style="font-size: 1.5em;">■</span></div>'
+                            if title != "":
+                                tag.string = f"{begin_details}\n\n<p class='alert proof title'>{title}</p>\n<p>\n{context}</p>\n{end_proof}\n{end_details}\n"
+                            else:
+                                tag.string = f"{begin_details}\n\n<p>\n{context}</p>\n{end_proof}\n{end_details}\n"
                         case _:
                             tag.string = f"<p class='alert {alert_type} title'>{title}</p>\n{context}</p>\n"
 
