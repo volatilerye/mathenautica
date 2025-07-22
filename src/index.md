@@ -14,6 +14,7 @@
 
 ## Q. このサイトに誤りがあったら？
 
-お手数ですが下記よりお知らせください
+お手数ですが下記のいずれかよりお知らせください
+- e-mail: mathenautica☆gmail.com (☆ → @)
 - [Github Issues](https://github.com/volatilerye/mathenautica/issues/new) (※ Github アカウントが必要です)
 - [X (Twitter) DM](https://x.com/volatile_) (※ 雑用アカウントなのでセンシティブなツイートが含まれていることをご了承ください)

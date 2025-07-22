@@ -29,4 +29,4 @@
 - [サイコロの合計が $n$ の倍数になる確率](probability/dice.md)
 
 # その他
-- [最小包含矩形問題 (Minimum bounding rectangle, MBR)(執筆中)](other/mbr.md)
+- [最小包含矩形問題 (Minimum bounding rectangle, MBR)](other/mbr.md)
