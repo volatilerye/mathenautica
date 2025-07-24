@@ -88,6 +88,11 @@ def replace_alerts_in_md_files(html_text: str) -> str:
                                 tag.string = f"{begin_details}\n\n<p class='alert proof title'>{title}</p>\n<p>\n{context}</p>\n{end_proof}\n{end_details}\n"
                             else:
                                 tag.string = f"{begin_details}\n\n<p>\n{context}</p>\n{end_proof}\n{end_details}\n"
+                        case "proof-without-details":
+                            end_proof = '<div style="text-align: right;"><span style="font-size: 1.5em;">■</span></div>'
+                            tag.string = f"<p class='alert {alert_type} title'>{title}</p>\n{context}{end_proof}\n</p>\n"
+
+                                              
                         case _:
                             tag.string = f"<p class='alert {alert_type} title'>{title}</p>\n{context}</p>\n"
 
