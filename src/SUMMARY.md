@@ -6,6 +6,7 @@
 
 # 数学ノート
 - [集合論](set/toc.md)
+  - [#1: 集合](set/1.md)
 - [位相空間論](topology/toc.md)
 - [圏論](category/toc.md)
 - [線形代数](linear/toc.md)

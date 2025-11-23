@@ -1,6 +1,10 @@
 # welcome to MATHENAUTICA !
 
-このサイトは私こと volatile rye (ボラティル ライ) がまったりと数学に関する記事をまとめるサイトです.
+このサイトは私こと volatile rye (ボラティル ライ) がまったりと数学に関するノートをまとめたサイトです.
+
+数学勉強中なので誤りなどがあったら教えてください.
+
+
 
 ---
 
@@ -8,7 +12,7 @@
 
 | 日付       | 内容                             |
 | ---------- | -------------------------------- |
-| 2025/11/23 | 全ての記事を非公開にしました（更新を一時休止します）|
+| 2025/11/23 | [集合#1](set/1.md) を公開しました|
 
 ---
 
@@ -23,10 +27,9 @@
 
 ---
 
-## Q. このサイトに誤りがあったら？
-
-お手数ですが下記のいずれかよりお知らせください
+## contact
 
 - e-mail: mathenautica☆gmail.com (☆ → @)
+- Discord (volatilerye)
 - [Github Issues](https://github.com/volatilerye/mathenautica/issues/new) (※ Github アカウントが必要です)
-- [X (Twitter) DM](https://x.com/volatile_) (※ 雑用アカウントなのでセンシティブなツイートが含まれていることをご了承ください)
+- [X (Twitter) DM](https://x.com/volatile_) (※ 雑用アカウントなのでセンシティブなツイートが含まれています)

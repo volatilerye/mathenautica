@@ -23,4 +23,4 @@ enable = false
 [build]
 
 [output.replace]
-command = "py -X utf8 ../../scripts/replace.py"
+command = "python -X utf8 ../../scripts/replace.py"
