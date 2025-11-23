@@ -22,7 +22,7 @@ def replace_ogp(html_text: str, html_path: Path) -> str:
     )
     replaced = re.sub(
         r'<meta content="" property="og:url">',
-        f'<meta content="{DEPLOY_HTML_HTTPS}{html_path.relative_to(BASE_HTML_DIR)}" property="og:url">',
+        f'<meta content="{DEPLOY_HTML_HTTPS}{str(html_path.relative_to(BASE_HTML_DIR)).replace('\\', '/')}" property="og:url">',
         replaced
     )        
 
