@@ -69,7 +69,7 @@ def replace_alerts_in_md_files(html_text: str) -> str:
                 context = "\n".join(
                     str(tag)
                     .replace(f'<div class="{tag["class"]}">\n', "")
-                    .replace("\n</div>", "", count=1)
+                    .replace("\n</div>", "", 1)
                     .split("\n", 1)[1:]
                 )
                 if tag["class"]:
