@@ -1,3 +1,8 @@
+.katex .cjk_fallback{
+    font-size: 0.9em;
+    font-family: "Jost", "Noto Sans Japanese", sans-serif
+}
+
 .custom-menu-title {
     display: inline-block;
     font-weight: 600;
@@ -12,6 +17,10 @@
     cursor: pointer;
 }
 
+.fa-svg{
+    fill: var(--fg)
+}
+
 .prev-next-buttons{
     font-weight: bold;
     display: flex;
@@ -20,14 +29,16 @@
 }
 
 .local-button-active[rel="prev"] {
-    justify-content: start;
+  display: block;
+  text-align: left;
 }
-.local-button-active[rel="next"]{
-    justify-content: end;
+
+.local-button-active[rel="next"] {
+  display: block;
+  text-align: right;
 }
 
 .invert-e  {
     display: inline-block;
     transform: scaleX(-1);
 }
-
