@@ -94,6 +94,6 @@ def replace_alerts_in_md_files(html_text: str) -> str:
 
                                               
                         case _:
-                            tag.string = f"<p class='alert {alert_type} title'>{title}</p>\n{context}</p>\n"
+                            tag.string = f"<p class='alert {alert_type} title'><b>{title}</b></p>\n{context}</p>\n"
 
     return soup.encode(formatter=None).decode("utf-8")
