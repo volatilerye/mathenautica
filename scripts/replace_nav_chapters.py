@@ -11,7 +11,8 @@ def replace_navigation(
     soup = BeautifulSoup(html_text, "html.parser")
     for tag in soup.find_all("nav", class_="nav-wrapper"):
         tag.decompose()
-
+    for tag in soup.find_all("nav", class_="nav-wide-wrapper"):
+        tag.decompose()
     # add custom navigation
     navigation: str = ""
     if index > 0:

@@ -76,7 +76,7 @@ def replace_alerts_in_md_files(html_text: str) -> str:
                     match alert_type:
                         case "default":
                             tag.string = (
-                                f"<p class='alert title'>{title}</p>\n{context}</p>\n"
+                                f"<p class='alert title'><b>{title}</b></p>\n{context}</p>\n"
                             )
                         case "proof":
                             begin_details = (
