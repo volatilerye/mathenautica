@@ -6,12 +6,6 @@ EXCLUDE_INVERT_E: Final[set[str]] = {
     r'(\s*)<title>(.+) - MATHENAUTICA</title>'
 }
 
-def replace_custom_menu_title(html_text: str) -> str:
-    return html_text.replace(
-        '<h1 class="menu-title">',
-        '<h1 class="custom-menu-title">',
-    )
-
 def invert_e(html_text: str) -> str:
     replaced = html_text
     matched = re.finditer(r"(.*)(MATHENAUTICA)(.*)", replaced)

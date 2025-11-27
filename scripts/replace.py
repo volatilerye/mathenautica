@@ -2,7 +2,7 @@ import re
 from pathlib import Path
 from typing import Final
 
-from replace_title import replace_custom_menu_title, invert_e
+from replace_title import invert_e
 from replace_head import replace_ogp
 from replace_book_to_site import replace_book_to_site
 from replace_alert import replace_alerts_in_md_files
@@ -27,7 +27,6 @@ if __name__ == "__main__":
             html_text = f.read()
         
         # Replace
-        html_text = replace_custom_menu_title(html_text)
         html_text = invert_e(html_text)
         html_text = replace_ogp(html_text, html_path)
         html_text = replace_book_to_site(html_text)
